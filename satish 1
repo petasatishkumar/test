@@ -1,0 +1,26 @@
+#include<stdio.h>
+main()
+{
+	int selectionSort(int [],int);
+	int arr[]={48,59,11,38,90,99,3};
+	int len=sizeof(arr)/sizeof(int);
+	selectionSort(arr,len);
+}
+selectionSort(int arr[],int len)
+{
+	int i,j,t;
+	for(i=0;i<len-1;i++)
+	{
+		for(j=i+1;j<len;j++)
+		{
+			if(arr[i]>arr[j])
+			{
+				t=arr[i];
+				arr[i]=arr[j];
+				arr[j]=t;
+			}
+		}
+	}
+	for(i=0;i<len;i++)
+	printf("%d ",arr[i]);
+}
